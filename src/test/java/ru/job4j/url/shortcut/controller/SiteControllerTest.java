@@ -1,9 +1,9 @@
 package ru.job4j.url.shortcut.controller;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.ResponseEntity;
 import ru.job4j.url.shortcut.dto.SiteDTO;
 import ru.job4j.url.shortcut.service.SiteService;
@@ -14,10 +14,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 public class SiteControllerTest {
 
-    @InjectMocks
+    @Autowired
     private SiteController siteController;
 
-    @Mock
+    @MockBean
     private SiteService siteService;
 
     @Test
